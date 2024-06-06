@@ -1,0 +1,118 @@
+
+.navbar{
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  font-size: 18px;
+  text-transform: uppercase;
+  height: 60px;
+}
+
+.collapse{
+  justify-content: space-between;
+}
+.logo{
+  width: 45px;
+}
+.navbar ul li a{
+  font-weight: 700;
+}
+.navbar ul li a{
+  border-radius: 10px;
+}
+.navbar ul li a:hover{
+  color: rgb(66, 155, 66) ;
+}
+.contenedor-icon{
+  display: flex;
+  align-items: center;
+  margin: 35px;
+  color: black;
+  font-size: 12px;
+}
+
+   
+i{
+  font-size: 30px;
+  cursor: pointer;
+}
+  
+i:hover{
+  color: rgb(66, 155, 66);
+}
+.bi{
+  color: black;
+  margin: 5px;
+}
+
+.container-all{
+  display: flex;
+  width: 48px;
+  
+}
+.container-carrito{
+  width:40px;
+}
+.btn{
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}  
+.numero{
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: 20px;
+  border: 2px solid white;
+}
+
+.ocultar{
+  display: none;
+}
+.nav-link{
+  font-size: 13px;
+  text-transform: capitalize;
+  color: black;
+}
+  
+@media (max-width: 600px){
+  
+  .navbar{
+    height: 80px;
+  }
+  .logo{
+      display: none;
+    }
+  .item-componet{
+    width: 150px;
+  }
+  i{
+    font-size: 30px
+  }
+  .icon-menu{
+      width: 20px;
+      margin-left: 0;
+  }
+  .btn-menu{
+    padding: 2px;
+    margin-top: 0;
+  }
+  .contenedor-icon{
+    margin: 0;
+    padding: 0;
+  }
+      
+}

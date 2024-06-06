@@ -1,0 +1,60 @@
+.footer{
+  display: flex;
+  text-align: center;
+}
+.redes{
+  display: flex;
+  justify-content:center;
+  margin: 50px;
+}
+.footer-container{
+  display: flex;
+}
+.footer-container ul{
+  list-style: none;  
+}
+
+.bi{
+  padding: 50px;
+} 
+.link{
+  text-transform: capitalize;
+  margin-bottom: 100px;
+  margin: 0 100px;
+}
+    
+.link ul li a{
+  font-size: 16px;
+  padding: 70 0px;
+}
+        
+.dato{
+  background-color: black;
+  color: white;
+}     
+.dato p{
+  text-align: center;
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .footer{
+     padding: 30px;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+  }
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .redes{
+    padding: 0;
+    margin-left: 0;
+  }
+  h4{
+    text-align: center;
+  }
+  .link ul{
+     text-align: center;
+  }
+}

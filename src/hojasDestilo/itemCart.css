@@ -1,0 +1,127 @@
+.container-item{
+    margin-top: 50px;
+    max-width: 450px;
+    min-height: 300px;
+    border: 2px solid #ccc;
+    background-color: hsla(0, 0%, 80%, 0.783);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.item-1{
+    display: flex;
+    
+}
+.img-product-car{
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    
+}
+.btn-pagar{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn-pagar:hover{
+    background-color: blue;
+}
+button:hover{
+    background-color: black;
+}
+.nombre{
+   font-size: 10px;
+   font-weight: bold; 
+}
+.description{
+  font-size: 10px;
+}
+.precio-car{
+   margin: 7px;
+   font-size: 11px;
+   margin-left: 15px;
+   color: rgb(15, 94, 4);
+   font-weight: bold;
+}
+h6{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgb(15, 94, 4);
+}
+.container-btn-contador{
+    display: flex;
+}
+.btn-cantida{
+    margin: 0 5px 0 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+    cursor: pointer;
+}
+.btn-cantida:hover{
+   color: green;
+}
+.cantida{
+    font-size: 15px;
+    font-weight: bold;
+}
+.remover{
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+.remover:hover{
+    color: blue;
+}
+.cart-vacio{
+    margin: auto;
+    display: block;
+    width: 200px;
+}
+@media (max-width: 600px){
+    .container-item{
+        margin-top: 50px;
+        width: 450px;
+        min-height: 300px;
+        
+    }
+    .item-1{
+        display: flex;
+    }
+    .img-product{
+        width: 140px;
+        height: 140px;
+        padding: 12px;
+        margin-top: 10px; 
+    }
+    h6{
+        display: flex;
+        justify-content: center;
+    }
+    .nombre{
+        margin: 3px ;
+        font-size: 12px;
+        font-weight: bold; 
+     }
+     .precio{
+         margin: 3px;
+        font-size: 150px;
+     }
+     .remover{
+        font-size: 12px;
+     }
+     .btn-pagar{
+        width: 250px;
+        font-size: 14px;
+        padding: 8px;
+     }
+}

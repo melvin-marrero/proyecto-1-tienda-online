@@ -1,0 +1,67 @@
+[
+    
+    {
+        "id":45,
+        "nombre":"Cover Redmi Note10",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/coverRedmiNote10.jpg",
+        "cantida":1
+    },
+    {
+        "id":46,
+        "nombre":"Cuffie bluetoht xiaomi",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/cuffieBluetothXiaomi.jpg",
+        "cantida":1
+    },
+    {
+        "id":47,
+        "nombre":"funda xiaomi redmi10",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/Funda-para-Xiaomi-Redmi-10.webp",
+        "cantida":1
+    },
+    {
+        "id":48,
+        "nombre":"palo selfie xiaomi",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/paloSelfiXiaomi.jpg",
+        "cantida":1
+    },
+    {
+        "id":49,
+        "nombre":"funda Qiong",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/QiongNifunda.jpg",
+        "cantida":1
+    },
+    {
+        "id":50,
+        "nombre":"reloj xiaomi redmi store",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/relojXiaomiRedmiStore.jpg",
+        "cantida":1
+    },
+    {
+        "id":51,
+        "nombre":"tripode xiaomi",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/tripodeXiaomi.jpg",
+        "cantida":1
+    },
+    {
+        "id":52,
+        "nombre":"xiaomi wach note pro",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-xiaomi/xiaomiWachNotePro.webp",
+        "cantida":1
+    }
+]

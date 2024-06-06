@@ -1,0 +1,66 @@
+[
+    {
+        "id":29,
+        "nombre":"adactador cable",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/adactadorCable.jpg",
+        "cantida":1
+    },
+    {
+        "id":30,
+        "nombre":"auriculares inalambrico",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/auricularesInalambrico.jpeg",
+        "cantida":1
+    },
+    {
+        "id":31,
+        "nombre":"cable Usb",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/cableUsb.webp",
+        "cantida":1
+    },
+    {
+        "id":32,
+        "nombre":"cargador de auto",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/cargador-auto.jpg",
+        "cantida":1
+    },
+    {
+        "id":33,
+        "nombre":"cover para s7",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/cover-S7.jpg",
+        "cantida":1
+    },
+    {
+        "id":34,
+        "nombre":"cover unicornio",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/cover-unicornio.jpg",
+        "cantida":1
+    },
+    {
+        "id":35,
+        "nombre":"sansung fold",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/sansungFold.jpg",
+        "cantida":1
+    },
+    {
+        "id":36,
+        "nombre":"soporte universal",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-acce-sansung/soporteUnivelsal.jpg",
+        "cantida":1
+    }
+]

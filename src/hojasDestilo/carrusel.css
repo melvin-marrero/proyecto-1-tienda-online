@@ -1,0 +1,11 @@
+
+.carousel-inner{
+    background-color: #82E0AA;
+    text-align: center;
+}
+button:hover{
+    background-color: transparent;
+}
+.p-carrusel{
+    font-size: 15px;
+}

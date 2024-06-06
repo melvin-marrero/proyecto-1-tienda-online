@@ -1,0 +1,35 @@
+[
+
+    {
+        "id":1,
+        "nombre":"aiphon 13",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen/producto1.png",
+        "cantida":1
+    },
+    {
+        "id":2,
+        "nombre":"lapto",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen/producto2.jpg",
+        "cantida":1
+    },
+    {
+        "id":3,
+        "nombre":"cargador masnetico",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen/producto3.webp",
+        "cantida":1
+    },
+    {
+        "id":4,
+        "nombre":"camara de vigilancia",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen/producto4.webp",
+        "cantida":1
+    }
+]

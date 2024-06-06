@@ -1,0 +1,67 @@
+[
+    {
+        "id":5,
+        "nombre":"aiphon 13",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen/producto1.png",
+        "cantida":1
+    },
+    
+    {
+        "id":6,
+        "nombre":"iphone 15 pro_max",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-iphone/iphone_15_Pro_Max_Blue_Titanium.jpg",
+        "cantida":1
+    },
+    {
+        "id":7,
+        "nombre":"iphone 14 pro",
+        "descripcio":"descrpcion:producto",
+        "precio":10000,
+        "img":"imagen-iphone/iphone-14-Pro-morado-oscuro.jpg",
+        "cantida":1
+    },
+    {
+        "id":8,
+        "nombre":"iphone 7 plus",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen-iphone/iphone7-plus.webp",
+        "cantida":1
+    },
+    {
+        "id":9,
+        "nombre":"iphone XR",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen-iphone/iphoneXR.jpg",
+        "cantida":1
+    },
+    {
+        "id":10,
+        "nombre":"iphone 10",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen-iphone/iphone10.webp",
+        "cantida":1
+    },
+    {
+        "id":11,
+        "nombre":"iphone 11",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen-iphone/iphone11.jpg",
+        "cantida":1
+    },
+    {
+        "id":12,
+        "nombre":"iphone 12",
+        "descripcio":"descrpcion:producto",
+        "precio":1000,
+        "img":"imagen-iphone/iphone12.jpg",
+        "cantida":1
+    }
+]

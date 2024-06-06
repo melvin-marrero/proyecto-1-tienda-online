@@ -1,0 +1,28 @@
+.h3-1{
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.p-1{
+    text-align: center;
+}
+.p-1 i{ 
+    font-size: 25px;
+}
+
+.conten-img{
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    margin-bottom: 40px;
+    display: flex;
+}
+.img-tienda2{
+    width: 500px;
+    height: 400px;
+}
+@media (max-width: 600px){
+    .conten-img{
+      flex-direction: column;
+    }
+}
