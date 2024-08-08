@@ -10,12 +10,12 @@ export default function HomeUsuario() {
   return (
     <DefaulLayoutUsuario>
        <div className="container-fluid">
-           <Header/>
+           <Header />
            <h3 className='h3-1'><i>actualiza tu vida</i></h3>
            <p className='p-1'><i>todo lo que necesita esta a un click ,el mundo en tus manos</i></p>
            <h3 className="h3-2"><i>producto mas mas buscado en las ultimas semanas</i></h3>
            <div className="container-producto">
-             <Main/>
+             <Main />
            </div>
            <div className="conten-img">
               <img src={tienda2} alt="img-tienda" className="img-tienda2" />

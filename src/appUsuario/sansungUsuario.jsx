@@ -1,19 +1,20 @@
 import { useContext } from "react";
-import { dataContent } from "./dataContent/dataConten";
-import "../hojasDestilo/main.css"
-import { masBuscado } from "../containerProduct/masBuscado";
+import { dataContent } from "../componentes/dataContent/dataConten";
+import DefaulLayoutUsuario from "./defaulLayoutUsuario";
+import { sansung } from "../containerProduct/sansung";
 import { Link } from "react-router-dom";
 
-export default function Main() {
-    const { addProducto }=useContext(dataContent);
-    
+
+export default function SansungUsuario() {
+  const {addProducto}=useContext(dataContent);
   return (
+    <DefaulLayoutUsuario>
     <div className="container-fluid">
     <div className="row row-cols-1 row-cols-md-4 row-cols-sm-12">
-      {masBuscado.map((item)=>{
+      {sansung.map((item)=>{
         return (
           <div key={item.id} className="product-1">
-            <Link to={`${item.nombre}`}><img src={item.img} alt="img-product" className="img-product" /></Link>
+           <Link to={`${item.nombre}`}> <img src={item.img} alt="img-product" className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
               <p className="descrp">{item.descripcio}</p>
@@ -27,6 +28,7 @@ export default function Main() {
         })}
       </div>
       </div>
+    </DefaulLayoutUsuario>
   ) 
   
-};
+}

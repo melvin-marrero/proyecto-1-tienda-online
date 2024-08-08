@@ -1,23 +1,29 @@
 import './App.css';
-import ContainerAccesoryIphone from './componentes/carpetaProducto/containerAccesoryIphone';
-import ContainerAccesorySansung from './componentes/carpetaProducto/containerAccesorySansung';
-import ContainerAccesoyXiaomi from './componentes/carpetaProducto/containerAccesoyXiaomi';
-import ContainerSansung from './componentes/carpetaProducto/containerSansung';
-import Iphonee from './componentes/carpetaProducto/iphonee';
-
-import ContainerXiaomi from './componentes/carpetaProducto/containerXiaomi';
 import DataProvide from './componentes/dataContent/dataConten';
 import Home from './componentes/home';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import InicioSeccion from './componentes/inicioSeccion';
 import Register from './componentes/register';
-import ContainerIphoneUsuario from './appUsuario/containerIphoneUsuario';
-import ContainerSansungUsuario from './appUsuario/containerSansungUsuario';
-import ContainerXiaomiUsuario from './appUsuario/containerXiaomiUsuario';
-import ContainerAccesoryIphoneUsuario from './appUsuario/containerAcesoryIphoneUsuario';
-import ContainerAccesorySansungUsuario from './appUsuario/containerAcesorySansungUsuario';
-import ContainerAccesoryXioamiUsuario from './appUsuario/containerAcesoryXiaomiUsuario';
-import HomeUsuario from './appUsuario/homeUsuario';
+import Iphone from './componentes/carpetaProducto/iphone';
+import Sansung from './componentes/carpetaProducto/sansung';
+import Xiaomi from './componentes/carpetaProducto/xiaomi';
+import ParaIphone from './componentes/carpetaProducto/paraIphone';
+import ParaSansung from './componentes/carpetaProducto/paraSansung';
+import ParaXiaomi from './componentes/carpetaProducto/paraXiaomi';
+import IphoneUsuario from './appUsuario/iphoneUsuario';
+import SansungUsuario from './appUsuario/sansungUsuario';
+import XiaomiUsuario from './appUsuario/xiaomiUsuario';
+import ParaIphoneUsuario from './appUsuario/para_Iphone_usuario';
+import ParaSansungUsuario from './appUsuario/para_sansung_usuario';
+import ParaXiaomiUsuario from './appUsuario/para_xiaomi_usuario';
+import AppUsuario from './appUsuario/appusuario';
+import IphoneScrem from './componentes/iphoneScrem';
+import MainScrem from './componentes/mainScrem';
+import SansungScrem from './componentes/sansungScrem';
+import XiaomiScrem from './componentes/xiaomiScrem';
+import IphoneAccesoryScrem from './componentes/iphoneAccesoryScrem';
+import SansungAccesoryScrem from './componentes/sansungAccesoryScrem';
+import XiaomiAccesoryScrem from './componentes/xiaomiAccesoryScrem';
 
 
 
@@ -32,21 +38,35 @@ function App() {
        <BrowserRouter> 
           <Routes>   
              <Route path='/' element={<Home /> }/>
-             <Route path='/miTienda' element={<HomeUsuario /> }/>
-             <Route path='/iphone' element={<Iphonee /> }/>
-             <Route path='/sansung' element={<ContainerSansung /> }/>
-             <Route path='/xiaomi' element={<ContainerXiaomi /> }/>
-             <Route path='/paraIphone' element={<ContainerAccesoryIphone /> }/>
-             <Route path='/paraSansung' element={<ContainerAccesorySansung /> }/>
-             <Route path='/paraXiaomi' element={<ContainerAccesoyXiaomi /> }/>
+             <Route path='/:nombre' element={<MainScrem /> }/>
+             <Route path='/miTienda' element={<AppUsuario /> }/>
+             <Route path='/iphone' element={<Iphone/> }/>
+             <Route path='/iphone/:nombre' element={<IphoneScrem /> }/>
+             <Route path='/sansung' element={<Sansung /> }/>
+             <Route path='/sansung/:nombre' element={<SansungScrem /> }/>
+             <Route path='/xiaomi' element={<Xiaomi /> }/>
+             <Route path='/xiaomi/:nombre' element={<XiaomiScrem /> }/>
+             <Route path='/paraIphone' element={<ParaIphone /> }/>
+             <Route path='/paraIphone/:nombre' element={<IphoneAccesoryScrem /> }/>
+             <Route path='/paraSansung' element={<ParaSansung /> }/>
+             <Route path='/paraSansung/:nombre' element={<SansungAccesoryScrem /> }/>
+             <Route path='/paraXiaomi' element={<ParaXiaomi /> }/>
+             <Route path='/paraXiaomi/:nombre' element={<XiaomiAccesoryScrem /> }/>
              <Route path='/inicioSeccion' element={<InicioSeccion /> }/>
+             <Route path='/inicioSeccion/:nombre' element={<MainScrem /> }/>
              <Route path='/register' element={<Register /> }/>
-             <Route path='/iphones' element={<ContainerIphoneUsuario /> }/>
-             <Route path='/sansungs' element={<ContainerSansungUsuario /> }/>
-             <Route path='/xiaomis' element={<ContainerXiaomiUsuario /> }/>
-             <Route path='/paraIphones' element={<ContainerAccesoryIphoneUsuario /> }/>
-             <Route path='/paraSansungs' element={<ContainerAccesorySansungUsuario /> }/>
-             <Route path='/paraXiaomis' element={<ContainerAccesoryXioamiUsuario /> }/>
+             <Route path='/iphones' element={<IphoneUsuario /> }/>
+             <Route path='/iphones/:nombre' element={<IphoneScrem /> }/>
+             <Route path='/sansungs' element={<SansungUsuario /> }/>
+             <Route path='/sansungs/:nombre' element={<SansungScrem /> }/>
+             <Route path='/xiaomis' element={<XiaomiUsuario /> }/>
+             <Route path='/xiaomis/:nombre' element={<XiaomiScrem /> }/>
+             <Route path='/paraIphones' element={<ParaIphoneUsuario /> }/>
+             <Route path='/paraIphones/:nombre' element={<IphoneAccesoryScrem /> }/>
+             <Route path='/paraSansungs' element={<ParaSansungUsuario /> }/>
+             <Route path='/paraSansungs/:nombre' element={<SansungAccesoryScrem /> }/>
+             <Route path='/paraXiaomis' element={<ParaXiaomiUsuario /> }/>
+             <Route path='/paraXiaomis/:nombre' element={<XiaomiAccesoryScrem /> }/>
           </Routes> 
         </BrowserRouter>
     </DataProvide>  

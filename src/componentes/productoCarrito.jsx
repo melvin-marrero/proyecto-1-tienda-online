@@ -15,17 +15,23 @@ export default function ProductoCarrito(){
 
     return carrito.map((product)=>{
         return (
-          <div className="container item-1" key={product.id}>
+          <div key={product.id}>
+            <div className="row">
+              <div className="col-md-2 col">
                 <img src={product.img} alt="img-prod-cart" className="img-product-car"/>
-                <div className="info-product">
-                 <p className="nombre">{product.nombre}</p>
-                 <p className="description">{product.descripcio}</p>
-                </div>
-                <div>
-                  <ContadorCatindaProuct product={product} />
-                  <p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p>
-                </div>
+              </div>
+              <div className="col-md-6 col">
+                  <p className="nombre">{product.nombre}</p>
+                  <p className="description">{product.descripcio}</p>
+              </div>
+              <div className="col-md-2 col">
+                <ContadorCatindaProuct product={product} />
+                <p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p>
+              </div>
+              <div className="col-md-2 col">
                 <p className="precio-car">${new Intl.NumberFormat().format(product.precio*product.cantida)}</p>
+              </div>
+            </div>
           </div>
         )
     });

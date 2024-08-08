@@ -22,7 +22,7 @@ export default function Menu(){
     <>
     <Carrusel />
     
-        <nav class="navbar navbar-expand-sm navbar-light">
+        <nav class="navbar navbar-expand-md  navbar-light">
             <div class="container-fluid menu">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-Toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <img src={menu} alt="menu" className="icon-menu"/>
@@ -32,7 +32,8 @@ export default function Menu(){
                     <Link to={"/inicioSeccion"}><i class="bi bi-person-circle"></i></Link>
                     <div className="container-carrito">
                        {carrito.length >0?<div className="numero"><CantidaProduct /></div>:null}
-                       <i class="bi-2 bi-cart-fill" onClick={mostralCarrito}></i>   
+                       <i class="bi-2 bi-cart-fill" onClick={mostralCarrito}></i>
+                        
                     </div>
                 </div>
 

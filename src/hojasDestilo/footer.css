@@ -31,12 +31,13 @@
 .dato{
   background-color: black;
   color: white;
+  padding: 10px;
 }     
 .dato p{
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer{
      padding: 30px;
      flex-direction: column;

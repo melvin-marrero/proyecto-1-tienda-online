@@ -1,20 +1,21 @@
 
-import { useContext } from "react";
-import { dataContent } from "../dataContent/dataConten";
-import DefaulLayaout from "../layoaut/defaulLayaout";
-import { xiaomi } from "../../containerProduct/xiaomi";
-import { Link } from "react-router-dom";
+import { useContext } from "react"
+import { dataContent } from "../componentes/dataContent/dataConten"
+import DefaulLayoutUsuario from "./defaulLayoutUsuario"
+import { sansungAccesoy } from "../containerProduct/sansungAccesoy"
+import { Link } from "react-router-dom"
 
-export default function Xiaomi() {
-    const { addProducto }=useContext(dataContent);
+export default function ParaSansungUsuario() {
+  const { addProducto }=useContext(dataContent)
+  
     return (
-      <DefaulLayaout>
+      <DefaulLayoutUsuario>
       <div className="container-fluid">
       <div className="row row-cols-1 row-cols-md-4 row-cols-sm-12">
-        {xiaomi.map((item)=>{
+        {sansungAccesoy.map((item)=>{
           return (
             <div key={item.id} className="product-1">
-              <Link to={`${item.nombre}`}><img src={item.img} alt="img-product" className="img-product" /></Link>
+             <Link to={`${item.nombre}`}> <img src={item.img} alt="img-product" className="img-product" /></Link>
               <div className="info-product">
                 <h4>{item.nombre}</h4>
                 <p className="descrp">{item.descripcio}</p>
@@ -28,6 +29,6 @@ export default function Xiaomi() {
           })}
         </div>
       </div>
-      </DefaulLayaout>
+      </DefaulLayoutUsuario>
     ) 
 }

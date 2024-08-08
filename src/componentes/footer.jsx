@@ -2,7 +2,7 @@
 import "../hojasDestilo/footer.css"
 export default function Footer() {
   return (
-    <footer> 
+    <footer > 
         <div className="redes">
            <i class="bi bi-instagram"></i>
            <i class="bi bi-facebook"></i>
@@ -43,9 +43,8 @@ export default function Footer() {
             </div>
         </div>
         <div className="dato">
-            <p>
-              telefono:8297960305. email:melvinmarrero78@gmail.com: 
-              melvin marrero desarrollador web 2024.
+            <p> 
+              melvin marrero desarrollador web 2024. &#169;
             </p>  
         </div>
     </footer>

@@ -1,33 +1,35 @@
 import { useContext } from "react";
 import { dataContent } from "../dataContent/dataConten";
-import { useEffect } from "react";
-import { useState } from "react";
-import axios from "axios";
+import DefaulLayaout from "../layoaut/defaulLayaout";
+import { iphones } from "../../containerProduct/iphones";
+import { Link } from "react-router-dom";
 
 
 export default function Iphone() {
   const {addProducto}=useContext(dataContent);
-  const [data,setData]=useState([]);
-  useEffect(()=>{
-    axios("iphone.json").then((res)=> setData(res.data));
-  },[]);
-
-  return data.map((product)=>{
-    return (
-      <div className="container" key={product.id}>
-        <div className="product-1">
-          <img src={product.img} alt="img-product" className="img-product" />
-          <div className="info-product">
-            <h4>{product.nombre}</h4>
-            <p>{product.descripcio}</p>
-            <p className="precio">${new Intl.NumberFormat().format(product.precio)}</p>
-            <button className="btn-add" onClick={()=>addProducto(product)}>
-              comprar
-            </button>
+  return (
+    <DefaulLayaout>
+    <div className="container-fluid">
+    <div className="row row-cols-1 row-cols-md-4 row-cols-sm-12">
+      {iphones.map((item)=>{
+        return (
+          <div key={item.id} className="product-1">
+           <Link to={`${item.nombre}`}> <img src={item.img} alt="img-product" className="img-product" /></Link>
+            <div className="info-product">
+              <h4>{item.nombre}</h4>
+              <p className="dispo">{item.cantidaDisponible === 0 ? "producto no disponible":null}</p>
+              <p className="descrp">{item.descripcio}</p>
+              <p className="odp">${new Intl.NumberFormat().format(item.precio)}</p>
+              <button className="btn-add" onClick={()=>addProducto(item)}>
+                 comprar <i class="bi bi-cart4"></i>
+              </button>
+            </div>
           </div>
-        </div>
+          )
+        })}
       </div>
-    )
-  })
+      </div>
+    </DefaulLayaout>
+  ) 
   
 }

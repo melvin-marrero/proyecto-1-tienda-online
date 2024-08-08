@@ -8,7 +8,7 @@
 ul li{
     font-size: 10px;
 }
-@media (max-width: 600px){
+@media (max-width: 768px){
     .btn{
         border: 4px solid #82E0AA;
         font-size: 15px;

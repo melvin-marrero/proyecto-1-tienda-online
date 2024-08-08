@@ -8,7 +8,7 @@
 .btn-user:hover{
   background-color: transparent;
 }
-@media (max-width: 600px){
+@media (max-width: 768px){
     .btn-user{
         font-size: 15px;
         padding: 10px;

@@ -76,7 +76,7 @@ body{
   span{
     color: red;
   }
-  @media (max-width: 600px){
+  @media (max-width: 768px){
     .container-login{
       margin: 10px;
     } 

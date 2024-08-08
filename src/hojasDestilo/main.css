@@ -1,15 +1,15 @@
-.container-producto{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 50px 0; 
-}
+
 .product-1{
     align-items: center;
     justify-content: center;
+    width: 250px;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 17px;
 }
 .img-product{
     width: 180px;
-    height: 180px;
+    height: 170px;
     padding: 3px;
     margin: auto;
     display: block;
@@ -24,18 +24,19 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0,0.20 );
 }
 .product-1:hover .img-product{
-    transform: scale(1.2);
+    transform: scale(1.1);
+    box-shadow: 0 transparent;
 }
 
 h4{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
-p{
-    font-size: 15px;
+.descrip{
+    font-size: 12px;
 }
-.precio{
+.odp{
     font-size: 15px;
     font-weight: bold;
     color: rgb(15, 94, 4);
@@ -44,18 +45,28 @@ p{
     border: none;
     padding: 7px;
     border-radius: 10px;
-    background-color: rgb(43, 41, 41);
-    color: white;
+    background-color: #82E0AA;
     font-size: 12px;
     font-weight: bold;
 }
 .btn-add:hover{
     background-color: blue;
 }
-@media (max-width: 600px){
-    .container-producto{
-        display: flex;
-        flex-direction: column;
+@media (max-width: 768px){
+    .product-1{
+        width: 100%;
+        margin-left: 0;
+    }
+    .img-product{
+        width: 125px;
+        height: 100px;
+        
     }
     
+    .descrp{
+        font-size: 15px;
+    }
+    h4{
+        font-size: 18px;
+    }
 }

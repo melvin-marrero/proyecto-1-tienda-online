@@ -87,8 +87,8 @@ i:hover{
   text-transform: capitalize;
   color: black;
 }
-  
-@media (max-width: 600px){
+ 
+@media (max-width: 768px){
   
   .navbar{
     height: 80px;

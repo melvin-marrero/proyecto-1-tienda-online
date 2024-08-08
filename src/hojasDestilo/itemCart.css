@@ -1,18 +1,14 @@
 .container-item{
     margin-top: 50px;
     max-width: 450px;
-    min-height: 300px;
-    border: 2px solid #ccc;
+    min-height: 250px;
     background-color: hsla(0, 0%, 80%, 0.783);
     display: flex;
     flex-direction: column;
     padding: 30px;
     margin-bottom: 30px;
 }
-.item-1{
-    display: flex;
-    
-}
+
 .img-product-car{
     width: 50px;
     height: 50px;
@@ -87,15 +83,12 @@ h6{
     display: block;
     width: 200px;
 }
-@media (max-width: 600px){
+@media (max-width: 768px){
     .container-item{
         margin-top: 50px;
         width: 450px;
         min-height: 300px;
         
-    }
-    .item-1{
-        display: flex;
     }
     .img-product{
         width: 140px;
