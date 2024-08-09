@@ -1,5 +1,4 @@
 import menu from "../imagenes/menu.png"
-import MarrerosoftwareCompanys from "../imagenes/MarrerosoftwareCompanys.png"
 import { Link } from "react-router-dom"
 import CantidaProduct from "../componentes/cantidaProduct";
 import ItemCart from "../componentes/itemCart";
