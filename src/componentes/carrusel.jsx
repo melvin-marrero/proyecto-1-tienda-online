@@ -4,7 +4,7 @@ import "../hojasDestilo/carrusel.css"
 export default function Carrusel(){
     return (
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-       <div class="carousel-inner">
+       <div class="carousel-inner carusel-nombre">
            <div class="carousel-item active" data-bs-interval="5000">
               <p className="p-carrusel"><u>MarrerosoftwareCompanys</u></p>
             </div>
