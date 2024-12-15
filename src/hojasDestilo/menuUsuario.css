@@ -1,0 +1,190 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+/* Estilo base para la barra de navegación */
+.navbar {
+  width: 100%;
+  background-color:#ccc ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  height: 60px;
+  box-shadow: 0 2px 8px rgb(66, 155, 66);
+}
+  
+.menu-usu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+.bi-menu {
+  width: 50px;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s;
+}
+
+.p-email-usu{
+  color: black;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  white-space: nowrap;        /* No permite que el texto se divida en varias líneas */
+  overflow: hidden;           /* Oculta el texto que no cabe dentro del contenedor */
+  text-overflow: ellipsis;    /* Agrega los puntos suspensivos "..." al final del texto */
+  display: inline-block;      /* Asegura que el elemento se comporta como un bloque en línea */
+  vertical-align: middle; 
+  max-width: 150px;
+}
+.container-all2{
+  margin-bottom: 15px;
+}
+.icon-menu2 {
+  width: 25px;
+  height: 25px;
+}
+  
+.contenedor-icon2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 14px;
+  margin-bottom: 10px ;
+}
+.contenedor-icon2 i{
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+.contenedor-icon2 i:hover {
+  color: rgb(66, 155, 66);
+}
+  
+.container-all2 {
+  display: flex;
+  align-items: center;
+}
+  
+.container-carrito2 {
+  position: relative;
+  margin-left: 20px;
+}
+  
+.numero2 {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 12px;
+  border: 2px solid white;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.navbar-nav2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+  
+.nav-item2 {
+  margin-right: 20px;
+}
+  
+.nav-link2 {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+  
+.nav-link2:hover {
+  color: #007bff;
+}
+  
+.collapse{
+  justify-content: space-between;
+}
+  
+.container-menu2 {
+  display: flex;
+  justify-content: flex-end;
+}
+  
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .navbar-nav-usu {
+    display: block;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .contenedor-icon2 {
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .item-componet {
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .numero2 {
+    font-size: 18px;
+    width: 22px;
+    height: 22px;
+    top: -4px;
+    right: -5px;
+  }
+  .container-all2{
+    margin-bottom: 5px;
+  }
+}
+
+/* Estilos adicionales */
+.btn {
+  background-color: rgb(66, 155, 66);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: darkgreen;
+}

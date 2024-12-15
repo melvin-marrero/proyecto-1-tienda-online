@@ -1,7 +1,7 @@
 import './App.css';
 import DataProvide from './componentes/dataContent/dataConten';
 import Home from './componentes/home';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InicioSeccion from './componentes/inicioSeccion';
 import Register from './componentes/register';
 import Iphone from './componentes/carpetaProducto/iphone';
@@ -24,54 +24,127 @@ import XiaomiScrem from './componentes/xiaomiScrem';
 import IphoneAccesoryScrem from './componentes/iphoneAccesoryScrem';
 import SansungAccesoryScrem from './componentes/sansungAccesoryScrem';
 import XiaomiAccesoryScrem from './componentes/xiaomiAccesoryScrem';
+import Adminitration from './componentes/admin';
+import PanelAdmin from './adminitrador/panelAdmin';
+import IphoneAdmin from './adminitrador/iphoneAdmin';
+import SansungAdmin from './adminitrador/sansungAdmin';
+import XiaomiAdmin from './adminitrador/xiaomiAdmin';
+import IphonAcesoryAdmin from './adminitrador/iphoAcesoryAdmin';
+import SansungAcesoryAdmin from './adminitrador/sansungAcesoryAdmin';
+import XiaomiAcesoryAdmin from './adminitrador/xiaomiAcesoryAdmin';
+import MasBuscadoAdmin from './adminitrador/masBuscadoAdmin';
 
-
-
-
-
+// Importa el componente ProtectedRoute
+import ProtectedRoute from './adminitrador/rutaProtegida';
 
 function App() {
-  
   return (
     <div className="App">
-    <DataProvide> 
-       <BrowserRouter> 
-          <Routes>   
-             <Route path='/' element={<Home /> }/>
-             <Route path='/:nombre' element={<MainScrem /> }/>
-             <Route path='/miTienda' element={<AppUsuario /> }/>
-             <Route path='/iphone' element={<Iphone/> }/>
-             <Route path='/iphone/:nombre' element={<IphoneScrem /> }/>
-             <Route path='/sansung' element={<Sansung /> }/>
-             <Route path='/sansung/:nombre' element={<SansungScrem /> }/>
-             <Route path='/xiaomi' element={<Xiaomi /> }/>
-             <Route path='/xiaomi/:nombre' element={<XiaomiScrem /> }/>
-             <Route path='/paraIphone' element={<ParaIphone /> }/>
-             <Route path='/paraIphone/:nombre' element={<IphoneAccesoryScrem /> }/>
-             <Route path='/paraSansung' element={<ParaSansung /> }/>
-             <Route path='/paraSansung/:nombre' element={<SansungAccesoryScrem /> }/>
-             <Route path='/paraXiaomi' element={<ParaXiaomi /> }/>
-             <Route path='/paraXiaomi/:nombre' element={<XiaomiAccesoryScrem /> }/>
-             <Route path='/inicioSeccion' element={<InicioSeccion /> }/>
-             <Route path='/inicioSeccion/:nombre' element={<MainScrem /> }/>
-             <Route path='/register' element={<Register /> }/>
-             <Route path='/iphones' element={<IphoneUsuario /> }/>
-             <Route path='/iphones/:nombre' element={<IphoneScrem /> }/>
-             <Route path='/sansungs' element={<SansungUsuario /> }/>
-             <Route path='/sansungs/:nombre' element={<SansungScrem /> }/>
-             <Route path='/xiaomis' element={<XiaomiUsuario /> }/>
-             <Route path='/xiaomis/:nombre' element={<XiaomiScrem /> }/>
-             <Route path='/paraIphones' element={<ParaIphoneUsuario /> }/>
-             <Route path='/paraIphones/:nombre' element={<IphoneAccesoryScrem /> }/>
-             <Route path='/paraSansungs' element={<ParaSansungUsuario /> }/>
-             <Route path='/paraSansungs/:nombre' element={<SansungAccesoryScrem /> }/>
-             <Route path='/paraXiaomis' element={<ParaXiaomiUsuario /> }/>
-             <Route path='/paraXiaomis/:nombre' element={<XiaomiAccesoryScrem /> }/>
-          </Routes> 
+      <DataProvide>
+        <BrowserRouter>
+          <Routes>
+            {/* Rutas públicas */}
+            <Route path="/" element={<Home />} />
+            <Route path="/:nombre" element={<MainScrem />} />
+            <Route path="/miTienda" element={<AppUsuario />} />
+            <Route path="/iphone" element={<Iphone />} />
+            <Route path="/iphone/:nombre" element={<IphoneScrem />} />
+            <Route path="/sansung" element={<Sansung />} />
+            <Route path="/sansung/:nombre" element={<SansungScrem />} />
+            <Route path="/xiaomi" element={<Xiaomi />} />
+            <Route path="/xiaomi/:nombre" element={<XiaomiScrem />} />
+            <Route path="/paraIphone" element={<ParaIphone />} />
+            <Route path="/paraIphone/:nombre" element={<IphoneAccesoryScrem />} />
+            <Route path="/paraSansung" element={<ParaSansung />} />
+            <Route path="/paraSansung/:nombre" element={<SansungAccesoryScrem />} />
+            <Route path="/paraXiaomi" element={<ParaXiaomi />} />
+            <Route path="/paraXiaomi/:nombre" element={<XiaomiAccesoryScrem />} />
+            <Route path="/inicioSeccion" element={<InicioSeccion />} />
+            <Route path="/inicioSeccion/:nombre" element={<MainScrem />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/iphones" element={<IphoneUsuario />} />
+            <Route path="/iphones/:nombre" element={<IphoneScrem />} />
+            <Route path="/sansungs" element={<SansungUsuario />} />
+            <Route path="/sansungs/:nombre" element={<SansungScrem />} />
+            <Route path="/xiaomis" element={<XiaomiUsuario />} />
+            <Route path="/xiaomis/:nombre" element={<XiaomiScrem />} />
+            <Route path="/paraIphones" element={<ParaIphoneUsuario />} />
+            <Route path="/paraIphones/:nombre" element={<IphoneAccesoryScrem />} />
+            <Route path="/paraSansungs" element={<ParaSansungUsuario />} />
+            <Route path="/paraSansungs/:nombre" element={<SansungAccesoryScrem />} />
+            <Route path="/paraXiaomis" element={<ParaXiaomiUsuario />} />
+            <Route path="/paraXiaomis/:nombre" element={<XiaomiAccesoryScrem />} />
+            <Route path="/admin" element={<Adminitration />} />
+
+            {/* Rutas protegidas */}
+            <Route 
+              path="/panelAdmin" 
+              element={
+                <ProtectedRoute>
+                  <PanelAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/iphoneAdmin" 
+              element={
+                <ProtectedRoute>
+                  <IphoneAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/sansungAdmin" 
+              element={
+                <ProtectedRoute>
+                  <SansungAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/xiaomiAdmin" 
+              element={
+                <ProtectedRoute>
+                  <XiaomiAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/iphoneAcesoryAdmin" 
+              element={
+                <ProtectedRoute>
+                  <IphonAcesoryAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/sansungAcesoryAdmin" 
+              element={
+                <ProtectedRoute>
+                  <SansungAcesoryAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/xiaomiAcesoryAdmin" 
+              element={
+                <ProtectedRoute>
+                  <XiaomiAcesoryAdmin />
+                </ProtectedRoute>
+              }
+            />
+            <Route 
+              path="/masBuscado" 
+              element={
+                <ProtectedRoute>
+                  <MasBuscadoAdmin />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
         </BrowserRouter>
-    </DataProvide>  
+      </DataProvide>
     </div>
-    
   );
 }
 

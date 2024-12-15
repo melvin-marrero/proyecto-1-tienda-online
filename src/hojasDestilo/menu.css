@@ -1,118 +1,195 @@
 
-.navbar{
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
   width: 100%;
-  background-color: #ccc;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 18px;
-  text-transform: uppercase;
   height: 60px;
+  box-shadow: 0 2px 8px rgb(66, 155, 66);
+}
+.navbar-prin{
+  background-color: red;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.bi-menu {
+  width: 50px;
+  color: #333;
+  font-size: 30px;
+  transition: color 0.3s;
 }
 
 .collapse{
   justify-content: space-between;
 }
-.logo{
-  width: 45px;
-}
-.navbar ul li a{
-  font-weight: 700;
-}
-.navbar ul li a{
-  border-radius: 10px;
-}
-.navbar ul li a:hover{
-  color: rgb(66, 155, 66) ;
-}
-.contenedor-icon{
+
+/* Contenedor de íconos (usuario, carrito, etc.) */
+.contenedor-icon {
   display: flex;
   align-items: center;
-  margin: 35px;
-  color: black;
-  font-size: 12px;
+  gap: 20px;
+  margin-right: 20px;
+  font-size: 14px;
 }
 
-   
-i{
+.contenedor-icon i {
   font-size: 30px;
   cursor: pointer;
-}
-  
-i:hover{
-  color: rgb(66, 155, 66);
-}
-.bi{
-  color: black;
-  margin: 5px;
+  color: #333;
+  transition: color 0.3s;
 }
 
-.container-all{
+.contenedor-icon i:hover {
+  color: rgb(66, 155, 66);
+}
+
+/* Logo */
+
+.logo {
+  width: 45px;
+  margin: 15px;
+}
+
+/* Menú principal */
+.navbar-nav {
   display: flex;
-  width: 48px;
+  gap: 20px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: green;
   
 }
-.container-carrito{
-  width:40px;
+
+
+/* Contenedor del carrito */
+.container-carrito {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.btn{
-  border: none;
-  padding: 7px;
-  border-radius: 10px;
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-}  
-.numero{
-  font-size: 15px;
+
+.numero {
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: red;
   color: white;
   font-weight: bold;
-  width: 25px;
-  height: 25px;
-  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  position: relative;
-  top: 15px;
-  left: 20px;
+  position: absolute;
+  top: -4px;
+  right: -5px;
   border: 2px solid white;
 }
 
-.ocultar{
+/* Item carrito oculto */
+.item-componet.ocultar {
   display: none;
 }
-.nav-link{
-  font-size: 13px;
-  text-transform: capitalize;
-  color: black;
+
+/* Transición suave en los elementos del carrito */
+.container-carrito i {
+  cursor: pointer;
+  font-size: 30px;
+  transition: color 0.3s ease;
 }
- 
-@media (max-width: 768px){
+
+.container-carrito i:hover {
+  color: rgb(66, 155, 66);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .navbar-nav {
+    display: block;
+    margin-top: 15px;
+    gap: 10px;
+  }
   
-  .navbar{
-    height: 80px;
+  .logo {
+    display: none;
+    margin: 0 auto;
   }
-  .logo{
-      display: none;
-    }
-  .item-componet{
-    width: 150px;
-  }
-  i{
-    font-size: 30px
-  }
-  .icon-menu{
-      width: 20px;
-      margin-left: 0;
-  }
-  .btn-menu{
-    padding: 2px;
-    margin-top: 0;
-  }
-  .contenedor-icon{
+
+  .contenedor-icon {
     margin: 0;
     padding: 0;
+    gap: 10px;
   }
-      
+
+  .item-componet {
+    width: 100%;
+  }
+
+  .btn-menu {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .numero {
+    font-size: 18px;
+    width: 22px;
+    height: 22px;
+    top: -4px;
+    right: -5px;
+  }
+}
+
+/* Estilos adicionales */
+.btn-menu  {
+  background-color: rgb(66, 155, 66);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.btn-menu :hover {
+  background-color: darkgreen;
 }

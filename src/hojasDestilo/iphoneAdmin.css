@@ -1,0 +1,277 @@
+.ul-menu-panel{
+  background-color: rgb(0, 94, 255);
+  min-height: 600px;
+}
+.containe-produc-panel{
+    display: flex;
+    flex-direction: column;
+}
+.containe-produc-panel .etiquetas{
+    display: flex;
+}
+
+.img-panl{
+    width: 50px;
+}
+.info-product-panel {
+    display: flex;
+    
+}
+.h6-nombre-panel{
+    padding: 10px;
+    margin-left: 25px;
+    color: blue;
+}
+.p-panel{
+    font-size: 15px;
+    color: green;
+    margin-left: 25px;
+}
+.p-cantida-panel{
+    font-size: 15px;
+    color: blue;
+    margin-left: 65px;
+}
+.p-descrp{
+    margin-left: 80px;
+}
+.btn-panel{
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    line-height: 20px;
+}
+.btn-panel:hover{
+    background-color: rgb(110, 110, 228);
+}
+.btn-panel-editar{
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    line-height: 20px;
+    width: 90%;
+}
+.btn-panel-editar:hover{
+    background-color: rgb(110, 110, 228);
+}
+.editar{
+    color: orange;
+    background-color: transparent;
+}
+.eliminar{
+    color: red;
+    background-color: transparent;
+}
+.modal-content{
+    background-color: #ccc;
+}
+.label-panel{
+    color: black;
+}
+.label-panel-2{
+    margin-left: 10px;
+}
+.inpu-name{
+    width: 100%;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 40px;
+    padding: 0 30px 5px;
+    transition: .3s ease all;
+    border: 1px solid transparent;
+    &:focus{
+        border: 1px solid rgb(3, 9, 56);
+        outline: none;
+    }
+    
+  }
+  .inpu-name-2{
+    width: 90%;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 40px;
+    margin-left: 10px;
+    transition: .3s ease all;
+    border: 1px solid transparent;
+    &:focus{
+        border: 1px solid rgb(3, 9, 56);
+        outline: none;
+    }
+  }
+  .inpu-precio{
+    display: block;
+    width: 25%;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 40px;
+    padding: 0 30px 5px;
+    transition: .3s ease all;
+    border: 1px solid transparent;
+    &:focus{
+        border: 1px solid rgb(3, 9, 56);
+        outline: none;
+    }
+  }
+  .inpu-precio-2{
+    display: block;
+    width: 25%;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 40px;
+    margin-left: 10px;
+    padding: 0 30px 5px;
+    transition: .3s ease all;
+    border: 1px solid transparent;
+    &:focus{
+        border: 1px solid rgb(3, 9, 56);
+        outline: none;
+    }
+  }
+  .btn-panel-edit{
+    background-color: transparent;
+    border: none;
+    color: orange;
+  }
+  textarea{
+    margin-left: 10px;
+  }
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.product-table th, .product-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.product-table img {
+    max-width: 50px;
+    height: auto;
+}
+.conten-buscar{
+    display: flex;
+    justify-content: end;
+}
+.input-buscar{
+    border: 1px solid black;
+    width: 30%;
+    margin-right: 15px;
+}
+/* Pantallas con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    .ul-menu-panel {
+        min-height: 100%;
+    }
+
+    .containe-produc-panel {
+        padding: 10px;
+    }
+
+    .h6-nombre-panel,
+    .p-panel,
+    .p-cantida-panel,
+    .p-descrp {
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .img-panl {
+        width: 40px;
+    }
+
+    .info-product-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-panel,
+    .btn-panel-editar {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .inpu-name,
+    .inpu-name-2,
+    .inpu-precio,
+    .inpu-precio-2 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .product-table th, .product-table td {
+        padding: 8px;
+    }
+
+    .product-table img {
+        max-width: 40px;
+    }
+
+    /* Para mejorar la visibilidad en dispositivos pequeños */
+    .modal-content {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-panel-edit {
+        font-size: 14px;
+    }
+}
+
+/* Pantallas medianas entre 600px y 768px */
+@media (min-width: 601px) and (max-width: 768px) {
+    .ul-menu-panel {
+        min-height: 500px;
+    }
+
+    .containe-produc-panel {
+        padding: 20px;
+    }
+
+    .h6-nombre-panel,
+    .p-panel,
+    .p-cantida-panel,
+    .p-descrp {
+        margin-left: 10px;
+    }
+
+    .img-panl {
+        width: 45px;
+    }
+
+    .info-product-panel {
+        flex-direction: row;
+    }
+
+    .btn-panel,
+    .btn-panel-editar {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .inpu-name,
+    .inpu-name-2,
+    .inpu-precio,
+    .inpu-precio-2 {
+        width: 100%;
+    }
+
+    .product-table th, .product-table td {
+        padding: 8px;
+    }
+}

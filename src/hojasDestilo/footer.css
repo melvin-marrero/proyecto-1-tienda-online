@@ -32,10 +32,12 @@
   background-color: black;
   color: white;
   padding: 10px;
+  max-width: 100%;
 }     
 .dato p{
   text-align: center;
   font-size: 15px;
+  line-height: 75px;
 }
 @media (max-width: 768px) {
   .footer{

@@ -2,19 +2,44 @@
 import { useContext } from "react"
 import { dataContent } from "../dataContent/dataConten"
 import DefaulLayaout from "../layoaut/defaulLayaout"
-import { sansungAccesoy } from "../../containerProduct/sansungAccesoy"
 import { Link } from "react-router-dom"
+import { useState,useEffect } from "react"
 
 export default function ParaSansung () {
   const {addProducto}=useContext(dataContent);
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchProductos = async () => {
+            try {
+                const response = await fetch('https://bask-end-tiend-online.onrender.com/api/sansungAcesory'); // Ajusta la URL según tu configuración
+                if (!response.ok) {
+                    throw new Error('Error al obtener productos');
+                }
+                const data = await response.json();
+                setProductos(data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProductos();
+    }, []);
+
+    if (loading) return <div>Cargando...</div>;
+    if (error) return <div>Error: {error}</div>;
   return (
     <DefaulLayaout>
     <div className="container-fluid">
     <div className="row row-cols-1 row-cols-md-4 row-cols-sm-12">
-      {sansungAccesoy.map((item)=>{
+      {productos.map((item)=>{
         return (
-          <div key={item.id} className="product-1">
-            <Link to={`${item.nombre}`}><img src={item.img} alt="img-product" className="img-product" /></Link>
+          <div key={item._id} className="product-1">
+            <Link to={`${item.nombre}`}><img src={item.image} alt="img-product" className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
               <p className="descrp">{item.descripcio}</p>

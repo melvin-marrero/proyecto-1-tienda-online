@@ -1,19 +1,30 @@
 .container-item{
     margin-top: 50px;
-    max-width: 450px;
+    max-width: 400px;
     min-height: 250px;
-    background-color: hsla(0, 0%, 80%, 0.783);
     display: flex;
     flex-direction: column;
-    padding: 30px;
     margin-bottom: 30px;
+}
+.producto-table th, .producto-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #82E0AA;
+    font-size: 10px;
+}
+.producto-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+.producto-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
 .img-product-car{
     width: 50px;
-    height: 50px;
-    padding: 3px;
-    
+    height: auto;
 }
 .btn-pagar{
     border: none;
@@ -30,13 +41,7 @@
 button:hover{
     background-color: black;
 }
-.nombre{
-   font-size: 10px;
-   font-weight: bold; 
-}
-.description{
-  font-size: 10px;
-}
+
 .precio-car{
    margin: 7px;
    font-size: 11px;
@@ -76,19 +81,24 @@ h6{
     font-size: 12px;
 }
 .remover:hover{
-    color: blue;
+    color: red;
 }
 .cart-vacio{
     margin: auto;
     display: block;
     width: 200px;
 }
+.total{
+    color: green;
+}
 @media (max-width: 768px){
     .container-item{
         margin-top: 50px;
-        width: 450px;
         min-height: 300px;
         
+    }
+    .producto-table{
+        width: 62%;
     }
     .img-product{
         width: 140px;

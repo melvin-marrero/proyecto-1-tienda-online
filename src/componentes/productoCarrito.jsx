@@ -16,22 +16,29 @@ export default function ProductoCarrito(){
     return carrito.map((product)=>{
         return (
           <div key={product.id}>
-            <div className="row">
-              <div className="col-md-2 col">
-                <img src={product.img} alt="img-prod-cart" className="img-product-car"/>
-              </div>
-              <div className="col-md-6 col">
-                  <p className="nombre">{product.nombre}</p>
-                  <p className="description">{product.descripcio}</p>
-              </div>
-              <div className="col-md-2 col">
-                <ContadorCatindaProuct product={product} />
-                <p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p>
-              </div>
-              <div className="col-md-2 col">
-                <p className="precio-car">${new Intl.NumberFormat().format(product.precio*product.cantida)}</p>
-              </div>
-            </div>
+            <table className="producto-table">
+                <thead>
+                  <tr>
+                      <th>Imagen</th>
+                      <th>producto</th>
+                      <th>Descripción</th>
+                      <th>cantida</th>
+                      <th>precio</th>
+                      <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <img src={product.image} alt="img-prod-cart" className="img-product-car"/></td>
+                    <td><p className="nombre">{product.nombre}</p></td>
+                    <td><p className="description">{product.descri}</p></td>
+                    <td><ContadorCatindaProuct product={product} /></td>
+                    <td><p className="precio-car">${new Intl.NumberFormat().format(product.precio*product.cantida)}</p></td>
+                    <td><p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p></td>
+                  </tr>
+                </tbody>
+             
+              </table>
           </div>
         )
     });

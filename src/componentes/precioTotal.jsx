@@ -6,7 +6,7 @@ export default function PrecioTotal() {
     const total = carrito.reduce((acc,ele)=>acc+ele.precio*ele.cantida,0);
   return (
     <div className="precioTotak">
-      <h6>total a pagal ${new Intl.NumberFormat().format(total)}</h6>
+      <h6 className="total">total a pagal ${new Intl.NumberFormat().format(total)}</h6>
     </div>
   )
   

@@ -1,3 +1,6 @@
+.menu-product{
+    z-index: 100;
+}
 .btn{
     background-color: transparent;
     text-transform: capitalize;

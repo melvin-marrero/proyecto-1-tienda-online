@@ -8,9 +8,9 @@ const DataProvide = ( { children } )=>{
      const [carrito,setCarrito]=useState(JSON.parse(localStorage.getItem("carrito"))||[]);
      
      function addProducto(product){
-      const productRepeact=carrito.find((item)=> item.id ===product.id);
+      const productRepeact=carrito.find((item)=> item._id ===product._id);
       if(productRepeact){
-        setCarrito(carrito.map((item)=>item.id===product.id?{...product,cantida:productRepeact.
+        setCarrito(carrito.map((item)=>item._id===product._id?{...product,cantida:productRepeact.
           cantida + 1 } :item));
          
       }else{setCarrito([...carrito,product]);

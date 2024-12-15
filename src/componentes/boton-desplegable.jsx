@@ -7,7 +7,7 @@ export default function BotonDesplegables(){
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       celulares
       </button>
-      <ul class="dropdown-menu">
+      <ul class="dropdown-menu menu-product">
         <li><Link class="dropdown-item" to={"/iphone"}>iphone</Link></li>
         <li><Link class="dropdown-item" to={"/sansung"}>sansung</Link></li>
         <li><Link class="dropdown-item" to={"/xiaomi"}>xiaomi</Link></li>

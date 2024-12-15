@@ -1,4 +1,4 @@
-import menu from "../imagenes/menu.png"
+
 import "../hojasDestilo/menu.css"
 import MarrerosoftwareCompanys from "../imagenes/MarrerosoftwareCompanys.png"
 import BotonDesplegables from "./boton-desplegable"
@@ -22,10 +22,10 @@ export default function Menu(){
     <>
     <Carrusel />
     
-        <nav class="navbar navbar-expand-md  navbar-light">
+        <nav class="navbar bg-light navbar-prin navbar-expand-md  navbar-light">
             <div class="container-fluid menu">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-Toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src={menu} alt="menu" className="icon-menu"/>
+                  <i class="bi-menu bi-list"></i>
                 </button>
 
                 <div className="contenedor-icon">
@@ -45,10 +45,10 @@ export default function Menu(){
                               <Link class="nav-link" aria-disabled="true" to={"/"}>inicio</Link>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#"><BotonDesplegables /></a>
+                              <h6 class="nav-link" aria-current="page"><BotonDesplegables /></h6>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="#"><BotonDesplegablesAccesory /></a>
+                              <h6 class="nav-link"><BotonDesplegablesAccesory /></h6>
                            </li>
                            <li class="nav-item">
                                <Link class="nav-link" aria-disabled="true" href="#">variado</Link>
