@@ -8,8 +8,8 @@ export default function BotonDesplegables(){
       celulares
       </button>
       <ul class="dropdown-menu menu-product">
-        <li><Link class="dropdown-item" to={"/iphone"}>iphone</Link></li>
-        <li><Link class="dropdown-item" to={"/sansung"}>sansung</Link></li>
+        <li><Link class="dropdown-item" to={"/iphone"}>iphone..</Link></li>
+        <li><Link class="dropdown-item" to={"/sansung"}>sansung.</Link></li>
         <li><Link class="dropdown-item" to={"/xiaomi"}>xiaomi</Link></li>
      </ul>
     </div>
