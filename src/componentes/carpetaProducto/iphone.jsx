@@ -42,7 +42,7 @@ export default function Iphone() {
       {productos.map((item)=>{
         return (
           <div key={item._id} className="product-1">
-           <Link to={`${item.nombre}`}> <img src={item.image} alt="img-product" className="img-product" /></Link>
+           <Link to={`${item.nombre}`}> <img src={item.image || 'https://via.placeholder.com/150'} alt={item.nombre} className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
               <p className="descrp">{item.descri}</p>
