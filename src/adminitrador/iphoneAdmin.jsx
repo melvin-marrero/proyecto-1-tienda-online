@@ -93,7 +93,7 @@ export default function IphoneAdmin() {
                                  <th>Precio</th>
                                  <th>Cantidad Disponible</th>
                                  <th>Descripción</th>
-                                 <th>Acciones</th>
+                                 <th>Acciones.</th>
                               </tr>
                            </thead>
                            <tbody>

@@ -22,7 +22,7 @@ export default function ModalFormulario( { product } ){
             method: "POST",
             body: formData,
             headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}`, // Reemplaza "token" con la clave que uses para almacenar el token
+                Authorization: `Bearer ${localStorage.getItem("token")}`, 
             },
         });
 
