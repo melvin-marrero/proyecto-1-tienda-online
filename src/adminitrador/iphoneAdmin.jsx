@@ -80,23 +80,23 @@ export default function IphoneAdmin() {
                />
             </div>
 
-            {/* Mostrar todos los productos o los filtrados */}
-            {productosFiltrados.length > 0 ? (
-               productosFiltrados.map((item) => {
-                  return (
-                     <div key={item._id} className="product-panel">
-                        <table className="product-table">
-                           <thead>
-                              <tr>
-                                 <th>Imagen</th>
-                                 <th>Nombre</th>
-                                 <th>Precio</th>
-                                 <th>Cantidad Disponible</th>
-                                 <th>Descripción</th>
-                                 <th>Acciones.</th>
-                              </tr>
-                           </thead>
-                           <tbody>
+            <div className="product-panel">
+               <table className="product-table">
+                  <thead>
+                     <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad Disponible</th>
+                        <th>Descripción</th>
+                        <th>Acciones.</th>
+                     </tr>
+                  </thead>
+                  {/* Mostrar todos los productos o los filtrados */}
+                  {productosFiltrados.length > 0 ? (
+                     <tbody>
+                        {productosFiltrados.map((item)=>{
+                           return (
                               <tr>
                                  <td><img src={item.image} alt="img-product" className="img-panl" /></td>
                                  <td className="h6-nombre-panel">{item.nombre}</td>
@@ -105,23 +105,26 @@ export default function IphoneAdmin() {
                                  <td className="p-descrp">{item.descri}</td>
                                  <td>
                                     <EdiccionForm 
-                                       producto={productoSeleccionado}
-                                       urlProduct={"iphone"} 
-                                       selector={() => setProductoSeleccionado(item)} 
+                                      producto={productoSeleccionado}
+                                      urlProduct={"iphone"} 
+                                      selector={() => setProductoSeleccionado(item)} 
                                     />
                                     <button className="btn btn-primary eliminar" onClick={() => handleEliminar(item._id)}>
-                                       Eliminar
+                                      Eliminar
                                     </button>
                                  </td>
                               </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  );
-               })
-            ) : (
-               <div>No se encontraron productos que coincidan.</div>
-            )}
+                              
+                           )
+                           })
+                        }
+                              
+                     </tbody>
+                     ):<div>No se encontraron productos que coincidan.</div> 
+                  }   
+                        
+               </table>
+            </div> 
          </div>
       </div>
    );

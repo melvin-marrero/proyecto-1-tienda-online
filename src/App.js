@@ -24,7 +24,7 @@ import XiaomiScrem from './componentes/xiaomiScrem';
 import IphoneAccesoryScrem from './componentes/iphoneAccesoryScrem';
 import SansungAccesoryScrem from './componentes/sansungAccesoryScrem';
 import XiaomiAccesoryScrem from './componentes/xiaomiAccesoryScrem';
-import Adminitration from './componentes/admin';
+
 import PanelAdmin from './adminitrador/panelAdmin';
 import IphoneAdmin from './adminitrador/iphoneAdmin';
 import SansungAdmin from './adminitrador/sansungAdmin';
@@ -36,6 +36,8 @@ import MasBuscadoAdmin from './adminitrador/masBuscadoAdmin';
 
 // Importa el componente ProtectedRoute
 import ProtectedRoute from './adminitrador/rutaProtegida';
+import Adminitration from './componentes/admin';
+
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
           <Routes>
             {/* Rutas públicas */}
             <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<Adminitration />} />
             <Route path="/:nombre" element={<MainScrem />} />
             <Route path="/miTienda" element={<AppUsuario />} />
             <Route path="/iphone" element={<Iphone />} />
@@ -74,8 +77,7 @@ function App() {
             <Route path="/paraSansungs/:nombre" element={<SansungAccesoryScrem />} />
             <Route path="/paraXiaomis" element={<ParaXiaomiUsuario />} />
             <Route path="/paraXiaomis/:nombre" element={<XiaomiAccesoryScrem />} />
-            <Route path="/admin" element={<Adminitration />} />
-
+            
             {/* Rutas protegidas */}
             <Route 
               path="/panelAdmin" 

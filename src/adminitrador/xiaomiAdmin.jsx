@@ -13,29 +13,29 @@ export default function XiaomiAdmin(){
   const inputRef = useRef(null);  
 
   useEffect(() => {
-    const fetchProductos = async () => {
-        try {
-            const response = await fetch('https://bask-end-tiend-online.onrender.com/api/xiaomi'); // Ajusta la URL según tu configuración
+   const fetchProductos = async () => {
+      try {
+         const response = await fetch('https://bask-end-tiend-online.onrender.com/api/xiaomi'); // Ajusta la URL según tu configuración
             if (!response.ok) {
-                throw new Error('Error al obtener productos');
+               throw new Error('Error al obtener productos');
             }
-            const data = await response.json();
-            setProductos(data);
-        } catch (error) {
-            setError(error.message);
-        } finally {
-            setLoading(false);
-        }
+         const data = await response.json();
+         setProductos(data);
+      } catch (error) {
+         setError(error.message);
+      } finally {
+         setLoading(false);
+      }
     };
 
     fetchProductos();
-}, []);
+   }, []);
 
-const productosFiltrados = productos.filter(producto =>
-    producto.nombre.toLowerCase().includes(query.toLowerCase())
- );
+   const productosFiltrados = productos.filter(producto =>
+     producto.nombre.toLowerCase().includes(query.toLowerCase())
+   );
 
-const handleEliminar = async (id) => {
+   const handleEliminar = async (id) => {
     if (window.confirm("¿Estás seguro de que deseas eliminar este producto?")) {
       try {
         const response = await fetch(`https://bask-end-tiend-online.onrender.com/api/xiaomi/${id}`, {
@@ -54,74 +54,75 @@ const handleEliminar = async (id) => {
         alert("Error de red al eliminar el producto");
       }
     }
-  };
+   };
 
-if (loading) return <div>Cargando...</div>;
-if (error) return <div>Error: {error}</div>;
-    return (
-<div className="conten">
-    <PanelMenu />
+   if (loading) return <div>Cargando...</div>;
+   if (error) return <div>Error: {error}</div>;
+   return (
+      <div className="conten">
+        <PanelMenu />
     
-    <div className="containe-produc-panel">
-        <ModalFormulario product={"xiaomi"}/>
+        <div className="containe-produc-panel">
+           <ModalFormulario product={"xiaomi"}/>
 
-        {/* Campo de búsqueda */}
-        <div className="search-bar conten-buscar">
-               <input 
-                  className="input-buscar"
-                  ref={inputRef}  // Mantener referencia para el campo de entrada
-                  type="text"
-                  placeholder="Buscar..."
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}  // Actualiza el estado de búsqueda
-                  autoFocus  // Mantiene el foco en el campo de búsqueda
+           {/* Campo de búsqueda */}
+           <div className="search-bar conten-buscar">
+              <input 
+                 className="input-buscar"
+                 ref={inputRef}  // Mantener referencia para el campo de entrada
+                 type="text"
+                 placeholder="Buscar..."
+                 value={query}
+                 onChange={(e) => setQuery(e.target.value)}  // Actualiza el estado de búsqueda
+                 autoFocus  // Mantiene el foco en el campo de búsqueda
                />
             </div>
-
-            {/* Mostrar todos los productos o los filtrados */}
-
-            {productosFiltrados.length > 0 ? (
-               productosFiltrados.map((item) => {
-                  return (
-                     <div key={item._id} className="product-panel">
-                        <table className="product-table">
-                           <thead>
-                              <tr>
-                                 <th>Imagen</th>
-                                 <th>Nombre</th>
-                                 <th>Precio</th>
-                                 <th>Cantidad Disponible</th>
-                                 <th>Descripción</th>
-                                 <th>Acciones</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td><img src={item.image} alt="img-product" className="img-panl" /></td>
-                                 <td className="h6-nombre-panel">{item.nombre}</td>
+            <div className="product-panel">
+            <table className="product-table">
+               <thead>
+                  <tr>
+                     <th>Imagen</th>
+                     <th>Nombre</th>
+                     <th>Precio</th>
+                     <th>Cantidad Disponible</th>
+                     <th>Descripción</th>
+                     <th>Acciones.</th>
+                  </tr>
+               </thead>
+               {/* Mostrar todos los productos o los filtrados */}
+               {productosFiltrados.length > 0 ? (
+                  <tbody>
+                     {productosFiltrados.map((item)=>{
+                        return (
+                           <tr>
+                              <td><img src={item.image} alt="img-product" className="img-panl" /></td>
+                              <td className="h6-nombre-panel">{item.nombre}</td>
                                  <td className="p-panel">${new Intl.NumberFormat().format(item.precio)}</td>
                                  <td className="p-cantida-panel">{item.cantidaDisponible}</td>
                                  <td className="p-descrp">{item.descri}</td>
                                  <td>
                                     <EdiccionForm 
-                                       producto={productoSeleccionado}
-                                       urlProduct={"xiaomi"} 
-                                       selector={() => setProductoSeleccionado(item)} 
+                                      producto={productoSeleccionado}
+                                      urlProduct={"xiaomi"} 
+                                      selector={() => setProductoSeleccionado(item)} 
                                     />
                                     <button className="btn btn-primary eliminar" onClick={() => handleEliminar(item._id)}>
-                                       Eliminar
+                                      Eliminar
                                     </button>
                                  </td>
                               </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  );
-               })
-            ) : (
-               <div>No se encontraron productos que coincidan.</div>
-            )}
-    </div>
-</div>
-    )
+                              
+                           )
+                        })
+                     }
+                              
+                  </tbody>
+                  ):<div>No se encontraron productos que coincidan.</div> 
+               }   
+                        
+            </table>
+         </div> 
+         </div>
+      </div>
+   )
 }
