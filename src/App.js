@@ -36,7 +36,9 @@ import MasBuscadoAdmin from './adminitrador/masBuscadoAdmin';
 
 // Importa el componente ProtectedRoute
 import ProtectedRoute from './adminitrador/rutaProtegida';
-import Adminitration from './componentes/admin';
+import Admin from './componentes/admin';
+
+
 
 
 function App() {
@@ -46,8 +48,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             {/* Rutas públicas */}
+            <Route path="/admin" element={<Admin />} />
             <Route path="/" element={<Home />} />
-            <Route path="/admin" element={<Adminitration />} />
             <Route path="/:nombre" element={<MainScrem />} />
             <Route path="/miTienda" element={<AppUsuario />} />
             <Route path="/iphone" element={<Iphone />} />
@@ -76,6 +78,7 @@ function App() {
             <Route path="/paraSansungs" element={<ParaSansungUsuario />} />
             <Route path="/paraSansungs/:nombre" element={<SansungAccesoryScrem />} />
             <Route path="/paraXiaomis" element={<ParaXiaomiUsuario />} />
+          
             <Route path="/paraXiaomis/:nombre" element={<XiaomiAccesoryScrem />} />
             
             {/* Rutas protegidas */}

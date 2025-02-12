@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children }) => {
   // Aquí puedes añadir validación del token
   const isAuthenticated = token && validateToken(token); // Implementa `validateToken`
 
-  return isAuthenticated ? children : <Navigate to="/" />;
+  return isAuthenticated ? children : <Navigate to="/admin" />;
 };
 
 // Opcional: función para validar el token (ejemplo para JWT)

@@ -27,9 +27,9 @@ export default function MasBuscadoAdmin(){
     };
 
     fetchProductos();
-}, []);
+    }, []);
 
-const handleEliminar = async (id) => {
+   const handleEliminar = async (id) => {
     if (window.confirm("¿Estás seguro de que deseas eliminar este producto?")) {
       try {
         const response = await fetch(`https://bask-end-tiend-online.onrender.com/api/masBucado/${id}`, {
@@ -50,52 +50,54 @@ const handleEliminar = async (id) => {
     }
   };
 
-if (loading) return <div>Cargando...</div>;
-if (error) return <div>Error: {error}</div>;
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div>Error: {error}</div>;
     return (
-<div className="conten">
-    <PanelMenu />
-    <div className="containe-produc-panel">
-        <ModalFormulario product={"masBuscado"}/>
+        <div className="conten">
+            <PanelMenu />
+            <div className="containe-produc-panel">
+               <ModalFormulario product={"masBuscado"}/>
         
-        {productos.map((item)=>{
-          return (
-            <div key={item._id} className="product-panel">
-                <table className="product-table">
-                    <thead>
-                        <tr>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Cantidad Disponible</th>
-                            <th>Descripción</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src={item.image} alt="img-product" className="img-panl" /></td>
-                            <td className="h6-nombre-panel">{item.nombre}</td>
-                            <td className="p-panel">${new Intl.NumberFormat().format(item.precio)}</td>
-                            <td className="p-cantida-panel">{item.cantidaDisponible}</td>
-                            <td className="p-descrp">{item.descri}</td>
-                            <td>
-                                <EdiccionForm 
-                                    producto={productoSeleccionado}
-                                    urlProduct={"masBuscado"} 
-                                    selector={() => setProductoSeleccionado(item)} 
-                                />
-                                <button className="btn btn-primary eliminar" onClick={() => handleEliminar(item._id)}>
-                                    Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="product-panel">
+                    <table className="product-table">
+                        <thead>
+                            <tr>
+                              <th>Imagen</th>
+                              <th>Nombre</th>
+                              <th>Precio</th>
+                              <th>Cantidad Disponible</th>
+                              <th>Descripción</th>
+                              <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {productos.map((item)=>{
+                            return (
+                                <tr>
+                                    <td><img src={item.image} alt="img-product" className="img-panl" /></td>
+                                    <td className="h6-nombre-panel">{item.nombre}</td>
+                                    <td className="p-panel">${new Intl.NumberFormat().format(item.precio)}</td>
+                                    <td className="p-cantida-panel">{item.cantidaDisponible}</td>
+                                    <td className="p-descrp">{item.descri}</td>
+                                    <td>
+                                        <EdiccionForm 
+                                          producto={productoSeleccionado}
+                                          urlProduct={"masBuscado"} 
+                                          selector={() => setProductoSeleccionado(item)} 
+                                        />
+                                        <button className="btn btn-primary eliminar" onClick={() => handleEliminar(item._id)}>
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                                )
+                            })}
+                        
+                        </tbody>
+                    </table>
+                </div>
+        
             </div>
-        );
-        })}
-    </div>
-</div>
+       </div>
     )
 }
