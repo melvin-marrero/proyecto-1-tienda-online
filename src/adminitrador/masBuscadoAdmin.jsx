@@ -86,7 +86,7 @@ export default function MasBuscadoAdmin(){
                                           selector={() => setProductoSeleccionado(item)} 
                                         />
                                         <button className="btn btn-primary eliminar" onClick={() => handleEliminar(item._id)}>
-                                            Eliminar
+                                            Eliminar.
                                         </button>
                                     </td>
                                 </tr>
