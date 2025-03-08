@@ -13,35 +13,40 @@ export default function ProductoCarrito(){
        localStor()
     }
 
-    return carrito.map((product)=>{
-        return (
-          <div key={product.id}>
-            <table className="producto-table">
-                <thead>
-                  <tr>
-                      <th>Imagen</th>
-                      <th>producto</th>
-                      <th>Descripción</th>
-                      <th>cantida</th>
-                      <th>precio</th>
-                      <th>Acciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td> <img src={product.image} alt="img-prod-cart" className="img-product-car"/></td>
-                    <td><p className="nombre">{product.nombre}</p></td>
-                    <td><p className="description">{product.descri}</p></td>
-                    <td><ContadorCatindaProuct product={product} /></td>
-                    <td><p className="precio-car">${new Intl.NumberFormat().format(product.precio*product.cantida)}</p></td>
-                    <td><p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p></td>
-                  </tr>
-                </tbody>
-             
-              </table>
-          </div>
+    return (
+      <table className="producto-table">
+      <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>producto</th>
+            <th>Descripción</th>
+            <th>cantida</th>
+            <th>precio</th>
+            <th>Acciones</th>
+        </tr>
+      </thead>
+      {carrito.map((product)=>{
+        return(
+          <tbody>
+          <tr>
+            <td> <img src={product.image} alt="img-prod-cart" className="img-product-car"/></td>
+            <td><p className="nombre">{product.nombre}</p></td>
+            <td><p className="description">{product.descri}</p></td>
+            <td><ContadorCatindaProuct product={product} /></td>
+            <td><p className="precio-car">${new Intl.NumberFormat().format(product.precio*product.cantida)}</p></td>
+            <td><p className="remover" onClick={()=>deleteProduct(product.id)}><u>eliminar</u></p></td>
+          </tr>
+        </tbody>
         )
-    });
+      })}
+      
+   
+    </table>
+    )
+        
+          
+          
+   
     
 }
 
