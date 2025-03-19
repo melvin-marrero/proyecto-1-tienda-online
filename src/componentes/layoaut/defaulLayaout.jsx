@@ -1,3 +1,4 @@
+import Footer from "../footer";
 import Menu from "../menus";
 
 
@@ -10,6 +11,7 @@ export default function DefaulLayaout( { children } ) {
     <main>
       {children}
     </main>
+    <Footer />
     </>
   )
 }

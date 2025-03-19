@@ -59,7 +59,8 @@ export default function EdiccionForm({ producto,selector,urlProduct }) {
                             {errors.nombre && <span>{errors.nombre.message}</span>}
 
                             <label htmlFor="precio" className="label-panel-2">Precio</label>
-                            <input type="number" className="inpu-precio-2" id="precio" {...register("precio", { required: true })} />
+                            <input type="number" className="inpu-precio-2" 
+                             step="any" id="precio" {...register("precio", { required: true })} />
 
                             <label htmlFor="cantidaDisponible" className="label-panel-2">Cantidad Disponible</label>
                             <input type="number" className="inpu-precio-2" id="cantidaDisponible" {...register("cantidaDisponible", { required: true })} />

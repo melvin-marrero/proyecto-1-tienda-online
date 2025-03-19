@@ -1,11 +1,11 @@
 
 import { useContext } from "react"
-import { dataContent } from "../dataContent/dataConten"
-import DefaulLayaout from "../layoaut/defaulLayaout"
+import { dataContent } from "../src/componentes/dataContent/dataConten"
+import DefaulLayaout from "../src/componentes/layoaut/defaulLayaout"
 import { Link } from "react-router-dom"
 import { useState,useEffect } from "react"
 
-export default function ParaSansung () {
+export default function ParaXiaomi() {
   const {addProducto}=useContext(dataContent);
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,25 +13,25 @@ export default function ParaSansung () {
 
     useEffect(() => {
         const fetchProductos = async () => {
-            try {
-                const response = await fetch('https://bask-end-tiend-online.onrender.com/api/sansungAcesory'); // Ajusta la URL según tu configuración
-                if (!response.ok) {
-                    throw new Error('Error al obtener productos');
-                }
-                const data = await response.json();
-                setProductos(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
+          try {
+            const response = await fetch('https://bask-end-tiend-online.onrender.com/api/xiaomiAcesory'); // Ajusta la URL según tu configuración
+            if (!response.ok) {
+                throw new Error('Error al obtener productos');
             }
-        };
+            const data = await response.json();
+            setProductos(data);
+          } catch (error) {
+            setError(error.message);
+          } finally {
+             setLoading(false);
+        }
+       };
 
-        fetchProductos();
-    }, []);
+       fetchProductos();
+      }, []);
 
-    if (loading) return <div>Cargando...</div>;
-    if (error) return <div>Error: {error}</div>;
+      if (loading) return <div>Cargando...</div>;
+      if (error) return <div>Error: {error}</div>;
   return (
     <DefaulLayaout>
     <div className="container-fluid">
@@ -42,7 +42,7 @@ export default function ParaSansung () {
             <Link to={`${item.nombre}`}><img src={item.image} alt="img-product" className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
-              <p className="descrp">{item.descripcio}</p>
+              <p className="descrp">{item.descri}</p>
               <p className="odp">${new Intl.NumberFormat().format(item.precio)}</p>
               <button className="btn-add" onClick={()=>addProducto(item)}>
                  comprar <i class="bi bi-cart4"></i>

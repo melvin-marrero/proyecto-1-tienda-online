@@ -57,24 +57,7 @@ h6{
     font-size: 12px;
     color: rgb(15, 94, 4);
 }
-.container-btn-contador{
-    display: flex;
-}
-.btn-cantida{
-    margin: 0 5px 0 5px;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 25px;
-    color: blue;
-    cursor: pointer;
-}
-.btn-cantida:hover{
-   color: green;
-}
-.cantida{
-    font-size: 15px;
-    font-weight: bold;
-}
+
 .remover{
     cursor: pointer;
     text-transform: capitalize;
@@ -91,6 +74,37 @@ h6{
 .total{
     color: green;
 }
+.container-btn-contador {
+    display: flex;
+    align-items: center;
+}
+  
+  .btn-cantida {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px ;
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: background-color 0.3s, transform 0.2s; /* Transición para efectos visuales */
+  }
+  
+  .btn-cantida:hover {
+    background-color: #0056b3; /* Color cuando pasa el mouse */
+    transform: scale(1.1); /* Efecto de agrandar */
+  }
+  
+  .btn-cantida:active {
+    background-color: #004085; /* Color cuando el botón está siendo presionado */
+    transform: scale(0.9); /* Efecto de presionar */
+  }
+  
+  .cantida {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
 @media (max-width: 768px){
     .container-item{
         margin-top: 50px;

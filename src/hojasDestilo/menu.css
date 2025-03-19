@@ -62,10 +62,28 @@ body {
 }
 
 /* Logo */
-
+.cont-logo{
+  display: flex;
+}
+.p-logo {
+  font-size: 18px;
+  margin-top: 25px;
+  font-weight: bold;
+  color: green;
+  font-style: italic;
+}
+.p-logo2 {
+  font-size: 13px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: blue;
+  font-style: italic;
+}
 .logo {
   width: 45px;
   margin: 15px;
+  margin-bottom: 25px;
+  border-radius: 3px;
 }
 
 /* Menú principal */

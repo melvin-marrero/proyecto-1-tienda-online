@@ -25,7 +25,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-  
+.p-email-usu{
+  background-color: yellow;
+  padding: 3px;
+  border-radius: 10px;
+} 
 .navbar-toggler {
   border: none;
   background: none;
@@ -175,8 +179,8 @@ body {
 
 /* Estilos adicionales */
 .btn {
-  background-color: rgb(66, 155, 66);
-  color: white;
+  background-color: transparent;
+  color: black;
   border: none;
   border-radius: 10px;
   font-size: 12px;
@@ -186,5 +190,6 @@ body {
 }
 
 .btn:hover {
-  background-color: darkgreen;
+  background-color: transparent;
+  color: #333;
 }

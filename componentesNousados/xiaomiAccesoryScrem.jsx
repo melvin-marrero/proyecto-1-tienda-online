@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { dataContent } from "./dataContent/dataConten";
+import { dataContent } from "../src/componentes/dataContent/dataConten";
 import { useParams,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 

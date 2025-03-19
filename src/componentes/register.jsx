@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form"
-import MarrerosoftwareCompanys from "../imagenes/MarrerosoftwareCompanys.png"
 import { Link,useNavigate } from "react-router-dom";
 import appFirebase from "../firebase/firebase"
 import { getAuth,createUserWithEmailAndPassword } from "firebase/auth"
@@ -10,10 +9,7 @@ export default function Register() {
     const {register,handleSubmit,formState:{errors}}=useForm();
     const togo=useNavigate();
   return (
-    <div className="container-login">
-        <div className="imagen-conten">
-          <Link to={"/"}><img src={MarrerosoftwareCompanys} alt="img-logo" className="img-logo"/></Link>
-        </div>
+    <div className="login-container">
         <div className="container-form">
             <form className="form" onSubmit={handleSubmit(async(e)=>{
                 console.log(e);

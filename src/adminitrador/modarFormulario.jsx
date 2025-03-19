@@ -64,8 +64,8 @@ export default function ModalFormulario( { product } ){
                       message:"ingrese nombre del producto"
                       },
                       maxLength:{
-                        value:"20",
-                        message:"20 carasteres maximo"
+                        value:"30",
+                        message:"30 carasteres maximo"
                       },
                       minLength:{
                         value:"3",
@@ -76,7 +76,7 @@ export default function ModalFormulario( { product } ){
                 
 
                     <label htmlFor="precio"className="label-panel">precio</label>
-                    <input type="number" id="precio"className="inpu-precio" 
+                    <input type="number" id="precio"className="inpu-precio"step="any" 
                     {...register("precio",{required:{
                       value:true,
                       message:"ingrese el precio"

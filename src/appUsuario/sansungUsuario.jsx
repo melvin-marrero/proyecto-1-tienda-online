@@ -14,7 +14,7 @@ export default function SansungUsuario() {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const response = await fetch('https://bask-end-tiend-online.onrender.com/api/sansungAcesory'); // Ajusta la URL según tu configuración
+                const response = await fetch('https://bask-end-tiend-online.onrender.com/api/sansung'); // Ajusta la URL según tu configuración
                 if (!response.ok) {
                     throw new Error('Error al obtener productos');
                 }

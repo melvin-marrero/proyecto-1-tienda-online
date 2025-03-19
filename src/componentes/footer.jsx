@@ -1,52 +1,53 @@
 
 import "../hojasDestilo/footer.css"
-export default function Footer() {
+import React from "react";
+
+
+const Footer = () => {
   return (
-    <footer > 
-        <div className="redes">
-           <i class="bi bi-instagram"></i>
-           <i class="bi bi-facebook"></i>
-           <i class="bi bi-twitter-x"></i>
+    <footer>
+      <div className="footer-container">
+        <div className="footer-links">
+          <div className="footer-column">
+            
+            <ul>
+              <li><a href="#">Directorio de Tiendas</a></li>
+              <li><a href="#">Carreras</a></li>
+              <li><a href="#">Nuestra Compañía</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            
+            <ul>
+              <li><a href="#">Ayuda</a></li>
+              <li><a href="#">Retiro de Productos</a></li>
+              <li><a href="#">Accesibilidad</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <ul>
+              <li><a href="#">Términos de Uso</a></li>
+              <li><a href="#">Privacidad & Seguridad</a></li>
+              <li><a href="#">Aviso en la Recolección</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <ul>
+              <li><a href="#">Tus Opciones de Privacidad</a></li>
+              <li><a href="#">Hoja de Datos de Seguridad</a></li>
+            </ul>
+          </div>
         </div>
-        <div className="footer-container">   
-           <div className="link">
-             <ul>
-                <li><a href="#">lorem</a></li>
-                <li><a href="#">lorem</a></li>
-                <li><a href="#">lorem</a></li>
-                <li><a href="#">lorem</a></li>
-              </ul>
-            </div>
-            <div className="link">
-                <ul>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-                  <li><a href="#">lorem</a></li>
-               </ul>
-            </div>
-            <div className="link">
-                <ul>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-               </ul>
-            </div>
-            <div className="link">
-                <ul>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-                   <li><a href="#">lorem</a></li>
-               </ul>
-            </div>
-        </div>
-        <div className="dato">
-            <p> 
-              melvin marrero desarrollador web 2024. &#169;
-            </p>  
-        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>&copy; 2024 Gigatech Store - Todos los derechos reservados.</p>
+      </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

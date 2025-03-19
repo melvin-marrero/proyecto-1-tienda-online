@@ -42,11 +42,12 @@ export default function XiaomiUsuario() {
             <Link to={`${item.nombre}`}><img src={item.image} alt="img-product" className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
-              <p className="descrp">{item.descri}</p>
               <p className="odp">${new Intl.NumberFormat().format(item.precio)}</p>
               <button className="btn-add" onClick={()=>addProducto(item)}>
                  comprar <i class="bi bi-cart4"></i>
               </button>
+              <p className="descrp">{item.descri}</p>
+              
             </div>
           </div>
           )

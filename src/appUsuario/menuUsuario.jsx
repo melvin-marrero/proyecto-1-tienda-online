@@ -6,7 +6,6 @@ import { useContext } from "react";
 import { dataContent } from "../componentes/dataContent/dataConten";
 import Carrusel from "../componentes/carrusel";
 import BotonDesplegableUsuario from "./botonDesplegableUsuario";
-import BotonDesplegablesAccesoryUsuaraio from "./botonDesplegablesAccesoryUsuario";
 import BotonUsuario from "./botonUsuario";
 import "../hojasDestilo/menuUsuario.css";
 
@@ -52,11 +51,9 @@ export default function MenuUsuario({correoUsuario}){
                            <li class="nav-item-usu">
                               <a class="nav-link" aria-current="page" href="#"><BotonDesplegableUsuario /></a>
                           </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#"><BotonDesplegablesAccesoryUsuaraio /></a>
-                           </li>
+                          
                            <li class="nav-item">
-                               <a class="nav-link" aria-disabled="true" href="#">variado</a>
+                               <Link class="nav-link" aria-disabled="true" to={"/variadoss"}>variado</Link>
                            </li>
                         </ul>
                     </div>      

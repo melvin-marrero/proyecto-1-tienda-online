@@ -1,11 +1,11 @@
 
 import { useContext } from "react"
-import { dataContent } from "../componentes/dataContent/dataConten"
-import DefaulLayoutUsuario from "./defaulLayoutUsuario"
+import { dataContent } from "../src/componentes/dataContent/dataConten"
+import DefaulLayoutUsuario from "../src/appUsuario/defaulLayoutUsuario"
 import { Link } from "react-router-dom"
 import { useState,useEffect } from "react"
 
-export default function ParaXiaomiUsuario() {
+export default function ParaSansungUsuario() {
   const { addProducto }=useContext(dataContent);
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,25 +13,26 @@ export default function ParaXiaomiUsuario() {
 
     useEffect(() => {
         const fetchProductos = async () => {
-          try {
-            const response = await fetch('https://bask-end-tiend-online.onrender.com/api/xiaomiAcesory'); // Ajusta la URL según tu configuración
-            if (!response.ok) {
-                throw new Error('Error al obtener productos');
+            try {
+                const response = await fetch('https://bask-end-tiend-online.onrender.com/api/sansungAcesory'); // Ajusta la URL según tu configuración
+                if (!response.ok) {
+                    throw new Error('Error al obtener productos');
+                }
+                const data = await response.json();
+                setProductos(data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
             }
-            const data = await response.json();
-            setProductos(data);
-          } catch (error) {
-            setError(error.message);
-          } finally {
-             setLoading(false);
-        }
-       };
+        };
 
-       fetchProductos();
-      }, []);
+        fetchProductos();
+    }, []);
 
-      if (loading) return <div>Cargando...</div>;
-      if (error) return <div>Error: {error}</div>;
+    if (loading) return <div>Cargando...</div>;
+    if (error) return <div>Error: {error}</div>;
+  
     return (
       <DefaulLayoutUsuario>
       <div className="container-fluid">
@@ -39,7 +40,7 @@ export default function ParaXiaomiUsuario() {
         {productos.map((item)=>{
           return (
             <div key={item._id} className="product-1">
-              <Link to={`${item.nombre}`}><img src={item.image} alt="img-product" className="img-product" /></Link>
+             <Link to={`${item.nombre}`}> <img src={item.image} alt="img-product" className="img-product" /></Link>
               <div className="info-product">
                 <h4>{item.nombre}</h4>
                 <p className="descrp">{item.descri}</p>

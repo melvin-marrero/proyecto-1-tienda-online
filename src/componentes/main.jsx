@@ -42,11 +42,13 @@ export default function Main() {
                         </Link>
                         <div className="info-product">
                             <h4>{item.nombre}</h4>
-                            <p className="descrip">{item.descri}</p>
-                            <p className="odp">${new Intl.NumberFormat().format(item.precio)}</p>
+                            <p className="odp">{new Intl.NumberFormat().format(item.precio)} $USD</p>
                             <button className="btn-add" onClick={() => addProducto(item)}>
-                                Comprar <i className="bi bi-cart4"></i>
+                             add to cart <i className="bi bi-cart4"></i>
                             </button>
+                            <p className="descrip">{item.descri}</p>
+                            
+                            
                         </div>
                     </div>
                 ))}

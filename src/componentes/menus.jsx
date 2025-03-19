@@ -1,14 +1,13 @@
 
 import "../hojasDestilo/menu.css"
-import MarrerosoftwareCompanys from "../imagenes/MarrerosoftwareCompanys.png"
+import fabiconTienda from "../imagenes/fabiconTienda.webp"
 import BotonDesplegables from "./boton-desplegable"
-import BotonDesplegablesAccesory from "./boton-desplegables-accesori"
 import CantidaProduct from "./cantidaProduct"
 import ItemCart from "./itemCart"
 import { useContext } from "react";
 import { dataContent } from "./dataContent/dataConten";
 import { Link } from "react-router-dom"
-import Carrusel from "./carrusel";
+
 
 
 export default function Menu(){
@@ -20,7 +19,6 @@ export default function Menu(){
     }
     return (
     <>
-    <Carrusel />
     
         <nav class="navbar bg-light navbar-prin navbar-expand-md  navbar-light">
             <div class="container-fluid menu">
@@ -38,7 +36,10 @@ export default function Menu(){
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-Toggler">
-                    <Link class="navbar-brand" to={"/"}><img src={MarrerosoftwareCompanys} className="logo" alt="logo" /></Link>
+                    <div className="cont-logo">
+                      <Link class="navbar-brand" to={"/"}><img src={fabiconTienda} className="logo" alt="logo" /></Link>
+                      <p className="p-logo"> GigaTech__</p><p className="p-logo2">Store</p>
+                    </div>
                     <div className="contenedor-menu">
                         <ul class="navbar-nav">
                            <li class="nav-item">
@@ -47,11 +48,9 @@ export default function Menu(){
                            <li class="nav-item">
                               <h6 class="nav-link" aria-current="page"><BotonDesplegables /></h6>
                           </li>
-                          <li class="nav-item">
-                              <h6 class="nav-link"><BotonDesplegablesAccesory /></h6>
-                           </li>
+                          
                            <li class="nav-item">
-                               <Link class="nav-link" aria-disabled="true" href="#">variado</Link>
+                               <Link class="nav-link" aria-disabled="true" to={"/variados"}>variado</Link>
                            </li>
                         </ul>
                     </div>      

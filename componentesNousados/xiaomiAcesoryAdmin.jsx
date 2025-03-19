@@ -1,8 +1,8 @@
 
-import ModalFormulario from "./modarFormulario"
+import ModalFormulario from "../src/adminitrador/modarFormulario"
 import { useEffect,useState,useRef } from "react"
-import EdiccionForm from "./ediccionForm";
-import PanelMenu from "./adminMenu";
+import EdiccionForm from "../src/adminitrador/ediccionForm";
+import PanelMenu from "../src/adminitrador/adminMenu";
 
 export default function XiaomiAcesoryAdmin(){
   const [productos, setProductos] = useState([]);

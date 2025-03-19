@@ -49,14 +49,11 @@ export default function PanelMenu() {
                 </Link>
                 <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div className="bg-white rounded">
-                        <Link className="collapse-item" to={"/iphoneAdmin"}>iphone</Link>
-                        <Link className="collapse-item" to={"/sansungAdmin"}>sangung</Link>
-                        <Link className="collapse-item" to={"/xiaomiAdmin"}>xiaomi</Link>
-                        <Link className="collapse-item" to={"/iphoneAcesoryAdmin"}>iphone accesorio</Link>
-                        <Link className="collapse-item" to={"/sansungAcesoryAdmin"}>sansung accesorio</Link>
-                        <Link className="collapse-item" to={"/xiaomiAcesoryAdmin"}>xiaomi accesorio</Link>
-                        <Link className="collapse-item" to={"/masBuscado"}>mas buscado</Link>
-                        <Link className="collapse-item" to={""}>variado</Link>
+                        <Link className="collapse-item" to={"/celularesAdmin"}>celulares</Link>
+                        <Link className="collapse-item" to={"/accesoriosAdmin"}>Accesorios</Link>
+                        <Link className="collapse-item" to={"/audiosAdmin"}>Audios</Link>
+                        <Link className="collapse-item" to={"/variadosAdmin"}>Variados</Link>
+                        <Link className="collapse-item" to={"/masBuscado"}>masBuscados</Link>
                     </div>
                 </div>
             </li>

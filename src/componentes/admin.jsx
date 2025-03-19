@@ -40,7 +40,7 @@ export default function Admin() {
   });
 
   return (
-    <div className="container">
+    <div className="login-container">
       <div className="container-form">
         <form className="form" onSubmit={enviarForm}>
           <h4>Inicie sesión para acceder al área de administración</h4>

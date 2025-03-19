@@ -1,26 +1,97 @@
+
+.contenedor-texto {
+  margin-top: 20px;
+  position: relative;
+  width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+  height: auto;
+  max-width: 100%;
+}
 .imagen{
   width: 80%;
   height: 350px;
   object-fit: cover;
   display: block;
   margin: auto;
+  filter: brightness(70%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .d-block{
     width: 80%;
     height: 500px; 
 }
+.cont-logo{
+  display: flex;
+}
+
+.texto-escrito {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-style: italic;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: escribir 5s steps(30) 2s forwards;
+}
+.p-logo-c {
+  font-size: 2.7rem;
+  margin-top: 25px;
+  font-weight: bold;
+  color: green;
+  font-style: italic;
+}
+.p-logo2-c {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  font-weight: bold;
+  color: blue;
+  font-style: italic;
+}
+.h6-hed{
+  text-align: center;
+}
+  @keyframes escribir {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
 
 @media (max-width: 768px){
-    .d-block{
-        width: 100%;
-        height: 200px;
-    }
-    .imagen{
-        width: 100%;
-        height: 150px;
-    }
-    .contenedor-carrusel{
-        margin-top: 100px;
-        position: relative;
-    }
+  .d-block{
+    width: 100%;
+    height: 200px;
+  }
+  .imagen{
+    width: 100%;
+    height: 150px;
+  }
+  .d-block{
+    width: 100%;
+  }
+  .texto-escrito {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-style: italic;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    height: auto;
+  }
+  .p-logo-c {
+    font-size: 1.4rem;
+  }
+  .p-logo2-c {
+    font-size: 0.7rem;
+  }
 }

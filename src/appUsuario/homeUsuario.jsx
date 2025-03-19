@@ -21,7 +21,6 @@ export default function HomeUsuario() {
               <img src={tienda2} alt="img-tienda" className="img-tienda2" />
               <img src={carritolleno} alt="img-tienda2" className="img-tienda2" />
             </div>
-           <Footer />
         </div>
     </DefaulLayoutUsuario>
   )

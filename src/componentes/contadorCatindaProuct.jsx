@@ -2,14 +2,17 @@ import { useContext } from "react";
 import { dataContent } from "./dataContent/dataConten";
 
 export default function ContadorCatindaProuct( { product } ) {
-    const { carrito,setCarrito,addProducto,localStor}=useContext(dataContent);
-    function remove(){
-    const productRepeact = carrito.find((item)=> item.id ===product.id);
-      productRepeact.cantida !== 1 &&
-      setCarrito(carrito.map((item)=>item.id===product.id?{...product,cantida:productRepeact.
-        cantida -1 }:item)); 
-        localStor()
+    const {setCarrito,addProducto}=useContext(dataContent);
+    function remove() {
+      setCarrito((prevCarrito) => {
+        return prevCarrito.map((item) =>
+          item._id === product._id // 🔥 Asegurarnos de usar _id correctamente
+            ? { ...item, cantida: Math.max(1, item.cantida - 1) }
+            : { ...item }
+        );
+      });
     }
+    
   return (
     <div className="container-btn-contador">
       <p className="btn-cantida" onClick={()=>remove(product)}>-</p>

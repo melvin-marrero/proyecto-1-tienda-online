@@ -42,14 +42,15 @@ export default function Iphone() {
       {productos.map((item)=>{
         return (
           <div key={item._id} className="product-1">
-           <Link to={`${item.nombre}`}> <img src={item.image || 'https://via.placeholder.com/150'} alt={item.nombre} className="img-product" /></Link>
+            <Link to={`${item.nombre}`}> <img src={item.image || 'https://via.placeholder.com/150'} alt={item.nombre} className="img-product" /></Link>
             <div className="info-product">
               <h4>{item.nombre}</h4>
-              <p className="descrp">{item.descri}</p>
-              <p className="odp">${new Intl.NumberFormat().format(item.precio)}</p>
+              <p className="odp">{new Intl.NumberFormat().format(item.precio)} $USD</p>
               <button className="btn-add" onClick={()=>addProducto(item)}>
                  comprar <i class="bi bi-cart4"></i>
               </button>
+              <p className="descrp">{item.descri}</p>
+              
             </div>
           </div>
           )
