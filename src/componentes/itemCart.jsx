@@ -27,23 +27,28 @@ export default function ItemCart() {
 
   // Función para registrar la orden en el backend
   const registrarOrdenEnBackend = async (detalles) => {
-    const payerName = detalles.payer && detalles.payer.name
+    const payerName = detalles.payer?.name
       ? `${detalles.payer.name.given_name} ${detalles.payer.name.surname}`
       : "Cliente Anónimo";
   
-      const orden = {
-        orderId: detalles.id,
-        payerName: payerName,
-        amount: parseFloat(detalles.purchase_units[0].amount.value),
-        currency: detalles.purchase_units[0].amount.currency_code
-      };
+      const productosComprados = carrito.map(item => ({
+        id: item._id, 
+        cantidad: item.cantida // Asegúrate de que este campo sea correcto
+      }));
+      
   
-      try {
-        const respuesta = await fetch("https://bask-end-tiend-online.onrender.com/api/paypal", {
-          method: "POST",
-          headers: {
-          "Content-Type": "application/json",
-        },
+    const orden = {
+      orderId: detalles._id,
+      payerName,
+      amount: parseFloat(detalles.purchase_units[0].amount.value),
+      currency: detalles.purchase_units[0].amount.currency_code,
+      productos: productosComprados // Ahora enviamos los productos
+    };
+  
+    try {
+      const respuesta = await fetch("https://bask-end-tiend-online.onrender.com/api/paypal", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orden),
       });
   
@@ -53,6 +58,7 @@ export default function ItemCart() {
       console.error("Error al registrar la orden en el backend:", error);
     }
   };
+  
   
   return carrito.length > 0 ? (
     <div className="container container-item">
@@ -85,8 +91,12 @@ export default function ItemCart() {
           onApprove={(data, actions) => {
             return actions.order.capture().then((details) => {
               alert(`✅ Pago exitoso, gracias ${details.payer.name.given_name}!`);
-              registrarOrdenEnBackend(details);
-              setCarrito([]);
+              registrarOrdenEnBackend(details).then(() => {
+                setCarrito([]); // Solo limpiar si la orden se guardó correctamente
+              }).catch(error => {
+                console.error("Error al registrar orden en backend:", error);
+              });
+              
               console.log("Pago completado con éxito:", details);
             });
           }}
