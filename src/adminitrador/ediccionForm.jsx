@@ -43,11 +43,14 @@ export default function EdiccionForm({ producto,selector,urlProduct }) {
 
     return (
         <>
-            <button type="button" className="btn btn-primary editar" data-toggle="modal" data-target="#exampleModalLong"
-            onClick={selector}>
-                Editar
+            <button type="button" className="btn btn-primary editar" 
+              data-bs-toggle="modal" data-bs-target="#exampleModalLong"
+              onClick={selector}>
+              Editar
             </button>
+
             <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -74,7 +77,10 @@ export default function EdiccionForm({ producto,selector,urlProduct }) {
                             <input type="submit" className="btn-panel-editar" value="Editar producto" />
                         </form>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                              Cerrar
+                            </button>
+
                         </div>
                     </div>
                 </div>

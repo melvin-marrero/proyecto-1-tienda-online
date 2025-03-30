@@ -43,13 +43,14 @@ export default function ModalFormulario( { product } ){
 });
 
     return (
-        <>
-        <button type="button" class="btn-panel" data-toggle="modal" data-target="#exampleModal">
-          agregar producto
+      <>
+        <button type="button" className="btn-panel" 
+          data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Agregar producto
         </button>
-        
-        
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -122,11 +123,14 @@ export default function ModalFormulario( { product } ){
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                  Cerrar
+                </button>
+
               </div>
             </div>
           </div>
         </div>
-        </>
+      </>
     )
 }
